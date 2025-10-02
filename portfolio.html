@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Portfolio Page</title>
+	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		} @font-face {
+			font-family: 'poppins';
+			src: url("poppins-regular-copy.ttf");
+		} h1 {
+			font: 48pt/1.4em Righteous;
+			text-align: center;
+			text-shadow: 1px 2px 3px
+				rgba (0,176,173,1.00);
+			margin: 24px 0;
+			color: #531732
+		} #textbox {
+			width: 1024px; 
+			height:928px;
+			margin: 0 auto; 
+			background: #DBA9C9;
+			box-shadow 2px 3px 6px gainsboro;
+			border: 1px solid gainsboro;
+			display: flex;
+			justify-content: center;
+		} figure {
+			margin: 24px;
+		} img, .zoom {
+			width: 200px;
+			height: 200px;
+			border: 1px solid gray;
+			box-shadow: 2px 3px 6px
+			gray;
+			transition: transform 0.5s;
+		} figcaption {
+			font: 16pt/1.4em Poppins;
+			margin-top: 3px;
+		} .zoom {
+			background-size: 100%;
+			background-position:
+			center;
+		} .zoom:hover {
+			transform: scale(1.03);
+			transition: transform 0.5s;
+		} .zoom:hover {
+			background-size: 105%;
+			transition: transform 0.5s;
+		}
+		body {
+			background: #DDC6DD;
+		} img {
+			width: 200px;
+			height: auto;
+		}	figure {
+			width: 200px;
+			height: 250px;
+		} figcaption {
+			font: 12pt/1.4em poppins;
+		}  h2 {
+		display:inline-block;
+		margin: 25px;
+		font: 19pt/1.4em 'Righteous'
+		
+	</style>
+	</head>
+	
+<body>
+	 <a href="portfolio homepage.html">
+		 <h2>Return</h2> 
+	</a>
+	<h1>Portfolio</h1>
+ <div id="textbox">
+	 <figure>
+		 <a href="cookbook.jpg">
+	 <img src="thumbnail-cookbook.jpg" class="zoom"/>
+		 </a>
+	 <figcaption>
+		 Taste of Seoul Cookbook Recipe 2-page spread
+	 </figcaption>
+	 </figure>
+		 <figure>
+		 <a href="menu.jpg">
+	  <img src="thumbnail-menu.jpg" class="zoom"/>
+		 </a>
+	 <figcaption>
+		 Honey Bloom Cafe and Bakery Menu
+	 </figcaption>
+	 </figure>
+	 	 <figure>
+		 <a href="cards.jpg">
+	 <img src="thumbnail-cards.jpg" class="zoom"/>
+		 </a>
+	 <figcaption>
+		 Jellyfish Business Cards
+	 </figcaption>
+	 </figure>
+	
+</div>
+</body>
+</html>
