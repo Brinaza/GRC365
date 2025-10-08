@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form</title>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap" rel="stylesheet">
+<style>
+	} * {
+		margin: 0;
+		padding: 0;
+	} body {
+		background: #DDC6DD;
+	} h1 {
+		text-align: center;
+		font-weight: normal;
+		margin-top: 24px;
+		font: 26pt/1.4em 'Righteous';
+		color: #531732;
+	} form {
+		width: 600px;
+		min-height: 600px;
+		padding: 24px;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		background: #edb4ce;
+		margin: 0 auto;
+		border: 1px solid #d47da4;
+		box-shadow: 2px 3px 6px #9c436b;
+		border-radius: 18px;
+		font: 13.5pt/1.2em Poppins;
+	} fieldset {
+		margin-top: 18px;
+	} #personal input, #submit {
+		width: 100%;
+		height: 24px;
+		margin-bottom: 12px;
+    } #personal textarea {
+        width: 100%;
+    } label {
+        margin-top: 12px;
+    } select, input[type="submit"] {
+        font: 12pt/1.4em Poppins;
+    } input[type="submit"] {
+        width: 200px;
+        height: 40px;
+        margin: 24px auto;
+        background: #a34e95;
+        border-radius: 6px;
+		font: 13pt/1.4em Poppins;
+		color: #FFFFFF
+    } input[type="submit"]:hover {
+       background: #d46ec3;
+    } fieldset {
+        margin: 8px 0 8px 0;
+        padding: 14px;
+	}  h2 {
+		display:inline-block;
+		margin: 25px;
+		font: 20pt/1.4em 'Righteous';
+	} textarea {
+		font: 12pt/1.4em Poppins;
+	} input {
+		height: 30px;
+		font: 12pt/1.4em 'Poppins';
+		justify-content: center;
+	} input[type=checkbox], input[type=radio] {
+        vertical-align: middle; 
+        position: relative;
+        bottom: .08em; 
+}
+</style>
+</head>
+	
+<body>
+	<a href="portfolio homepage.html">
+		 <h2>Return</h2> 
+	</a>
+	<form action="https://formsubmit.co/nazarb1@unlv.nevada.edu" method="POST">
+	<h1>Contact Me</h1>
+		<label for="fname">First Name</label><br/> 
+		<input type="text" id="fname"  name="First name"/><br/>
+		<label for="lname">Last Name</label><br/>
+		<input type="text" id="lname"  name="Last name"/><br/>
+		<label for="email">Email</label><br/>
+		<input type="text" id="email"  name="Email"/><br/>
+	
+		<fieldset>
+		<legend>What brings you here today?</legend>
+		<input type="radio" name="What brings them here today?" id="design" value="Hire you for a design" />
+		<label for="Hire you for a design">I’d like to hire you for a design project</label><br/>
+		<input type="radio" name="What brings them here today?" id="Quote or learn about pricing" value="Quote or learn about pricing" />
+		<label for="Quote or learn about pricing">I want to get a quote or learn about pricing</label><br/>
+		<input type="radio" name="What brings them here today?" id="Questions about portfolio" value="Questions about Portfolio" />
+		<label for="Questions about portfolio">I have questions about your portfolio</label><br/>
+		<input type="radio" name="What brings them here today?" id="Collab" value="Collab" />
+		<label for="Collab">I’d like to collaborate or connect</label><br/>
+		<input type="radio" name="What brings them here today?" id="Other" value="Other" />
+		<label for="Other">Other (if so please write in the message why are you here today)</label><br/>	
+		<textarea rows="8" cols="39" required> </textarea>
+		</fieldset>
+		<fieldset>
+		<legend>What type of design services are you interested in?</legend>
+			<input type="checkbox" name="Design services they are interested in" id="Branding" value="Branding" />
+			<label for="Branding">Logo Design / Branding</label><br/>
+			<input type="checkbox" name="Design services they are interested in" id="Web design" value="Web design" />
+			<label for="Web design">Web Design / UI Design</label><br/>
+			<input type="checkbox" name="Design services they are interested in" id="Packaging" value="Packaging" />
+			<label for="Packaging">Packaging Design</label> <br/>
+			<input type="checkbox" name="Design services they are interested in" id="Social media" value="Social Media" />
+			<label for="Social media">Social Media Design</label><br/>
+		</fieldset>
+		<fieldset>
+		<legend>When would you like to start your project?</legend> 
+		<select name="When would they like to start their project?">
+			<option value="timeline">Select a timeline</option>
+			<option value="asap">As soon as possible</option>
+			<option value="within 1-2 weeks">Within 1–2 weeks</option>
+			<option value="within a month">Within a month</option>
+			<option value="few months">In a few months</option>
+			<option value="exploring">Just exploring for now</option>
+	</select>
+	</fieldset>
+	<input type="submit" value="Submit" />
+	</form> 
+</body>
+</html>
