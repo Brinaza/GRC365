@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>animation</title>
+	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+	<style>
+		#bg {
+			width: 1150px;
+			height: 509px;
+			margin: 0 auto;
+			background: url("cookbook.jpg")no-repeat center center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			overflow: hidden;
+			position: relative;
+		} button {
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			background: #7cd6eb;
+			border: 1px solid gray;
+			display: block;
+		} #painting {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			width: auto;
+			height: 509px;
+			z-index: 2;
+			object-fit: contain;
+			animation-name: letsgo;
+			animation-duration: 6s;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease-in;
+			animation-play-state: paused;	
+		} #painting:active {
+			animation-play-state: running;
+		}	@keyframes letsgo {
+			0% {left: 10px;}
+			100% {left:120vw;}
+		} body {
+			background-color: #DDC6DD;
+			font-family: "Poppins", sans-serif;
+		} h2 {
+		display:inline-block;
+		margin: 25px;
+		font: 19pt/1.4em 'Righteous'
+
+	</style>
+</head>
+
+<body>
+	 <a href="portfolio homepage.html">
+		 <h2>Return</h2> 
+	</a>
+	<div id="bg">
+	<button onClick="document.getElementById('painting').style.animationPlayState='running';"> Paint </button>
+	<img id="painting" src="painting.png" />
+	</div>
+</body>
