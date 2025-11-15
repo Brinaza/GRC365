@@ -1,0 +1,315 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>type sample</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> 
+<script   src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="  crossorigin="anonymous"></script>
+
+	<style>
+		 @font-face {
+			font-family: 'Sono';
+			src: url("Sono.ttf");
+		} @font-face {
+			font-family: 'Mallanna';
+			src: url("Mallanna-Regular.ttf")
+		}
+		* {margin: 0; padding: 0;}
+		body {
+			margin: 0;
+			padding: 0;
+			
+			background: url("gd.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background: #690a0f; 
+			
+		} caption {
+			font: 300 9pt/1.4em'Sono';
+			color: white;
+			margin-top: 6px;	
+		} h1 {
+			font: 500 55pt/1.4em 'sono';
+			text-align: center;
+			color: transparent;
+            background: linear-gradient(90deg, rgba(179, 199, 82),rgba(179, 199, 82),  rgba(240, 185, 84), rgba(219, 211, 212), rgba(219, 211, 212), rgba(240, 185, 84), rgba(179, 199, 82), rgba(179, 199, 82));
+            background-clip: text;
+			width: 825px;
+			margin: 48px auto 24px auto;
+		} img {
+			width: 50%;
+			height: auto;
+			display: block;
+			margin: 24px auto;
+			border-rdius: 12px;
+			justify-content: center;
+		} #body {
+			font: 14pt/1.4em 'Mallanna';
+			width: 768px;
+			margin: 0 auto;
+			color: white;
+		} p {
+			font: 16pt/1.5em Mallanna;
+			color: white;
+			width: 70ch;
+			margin: 48px auto;
+		} span {
+			font: 47pt/1.0em 'Mallanna';
+			color: white;
+			float: left;
+			text-shadow: 2px 3px 0 #400812;
+			margin: 0 3px -12px 0;
+		} #buttons 
+		img {
+			width: 150px;
+			height: 150px;
+		} figure {
+			text-align: center;
+			margin: 24px auto;
+		} figure img {
+			display: block;
+			margin: 0 auto;
+		} #buttons {
+			display: flex; 
+			justify-content:center;
+			align-items: center;
+			margin: 24px auto;
+			gap: 100px;
+		} #buttons figure {
+			text-align: center;         margin: 0;
+		} #buttons figure img {
+			display: block; 
+			margin: 0 auto;
+			width: 50px;
+			height: 50px;
+		} .image-container {
+			width: 930px;
+			margin: 24px auto;
+			display: grid;
+			grid-template: repeat(3, 1fr);
+			gap: 32px;
+			background: whitesmoke;
+			padding: 16px;
+			position: relative;
+			padding-top: 70px;
+		} button {
+			width: 120px;
+			height: 40px;
+			grid-area: 1/1/2/4;
+		} .image-container button {
+			margin: 24px auto;
+			display: block;
+			width: 150px;
+			height: 40px;
+		} .image-container .toggle-button { 
+		position: absolute;
+		top: 16px;
+		left: 16px;
+		width: 150px;
+		height: 40px;
+		} .img-container figure img:hover {
+			transform: scale(1.05);
+		}.image-container figure {
+			text-align: center;
+		} .image-container summary {
+		 font-family: 'Mallanna', sans-serif;
+		font-size: 16pt;
+			color: #000
+		text-align: center;
+			margin-top: 8px;
+		} .menu-description {
+          font-family: 'Mallanna', sans-serif;
+          font-size: 14pt;
+		  font-style: italic;
+          color: black;
+		} figcaption {
+			color: white;
+			font-family: 'Mallanna', sans-serif;
+			font-style: oblique;
+		} .zoomed {
+    position: relative;
+    z-index: 1000;
+    transform: scale(2.5);  
+    box-shadow: 2px 3px 6px gray;  
+}
+
+.book-description {
+    font-family: 'Mallanna', sans-serif;
+    font-size: 14pt;
+	font-style: italic;
+    color: black;
+}
+
+.toy-description {
+    font-family: 'Mallanna', sans-serif;
+    font-size: 14pt;
+    font-style: italic;
+    color: black;
+}    
+    #polkadots {
+        width: 800px;
+        height: 600px;
+        border-radius: 12px;
+        margin: 40px auto;
+        background: url("colorfulpokadots.jpg") no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    #circle1, #circle2 {
+        width: 300px;
+        height: 300px;
+        background: rgba(255,255,255,0.25);
+        border-radius: 50%;
+        border: 2px solid dimgray;
+        box-shadow: 2px 3px 6px rgba(255,255,255,0.33);
+        position: absolute;
+        top: 150px;
+        left: 150px;
+        cursor: grab;
+    }
+    #circle1 {
+        backdrop-filter: blur(6px);
+    }
+    #circle2 {
+        backdrop-filter: saturate(5);
+        left: 350px; 
+    }
+</style>
+	<script language="javascript"
+			type="text/javascript">
+		function increaseContrast() {
+			
+	document.getElementById('page').style.background="white";
+			
+	page.querySelectorAll('p, span, #body, caption,h1, figcaption').forEach(el => el.style.color = 'black');
+
+			
+	} function resetContrast() {
+		document.getElementById('page').style.background=" #690a0f";
+			
+page.querySelectorAll('p, span,caption').forEach(el => el.style.color = 'black');
+page.querySelectorAll('span, #caption, h1,#body, figcaption').forEach(el => el.style.color = 'white');
+	}
+	
+	
+	</script>
+</head>
+
+<body>
+	<div id="page">
+	<h1> GRAPHIC DESIGN: BRIEANNE NAZARENO</h1>
+	<img src="gd.jpg" />
+	<p id="caption"> Photo by Niels Kehl on Unsplash </p>
+	<p id="body"><span>T</span>-he important starting point is this: To realize that color is not a material existence, not a substance, not a fixed fact equally appreciable by all and equally demonstrable to all. It is a sensation; and a sensation not of the same force or quality for different individuals. Of itself it depends upon the waves of the ether in space; for us it depends upon the power and truth of our eyes. One may truthfully see a color that is quite another thing to another person, if there should chance to be a difference radical enough or defects serious enough in the eyes of either.56 The laws governing light are of great importance to the colorists. There are subtleties that have important practical application which cannot be guessed otherwise than by direct reference to science. In no other way can a printer know for example what colors are complementary or what effect a certain color will have upon another when they are used together.
+
+There are many curious facts about color which do not appear to be regulated by laws at all similar to those we are accustomed to apply in other matters; that there is this universal and radical difference is of great importance to those who use color in printing. It is interesting to realize that color is produced by light waves, the different colors by waves of different lengths, or greater frequency; that red appears to the eye when the light wave is 1/39000 of an inch in length, or when the frequency of the vibration is 392 quadrillions per second, by the American system of enumeration. It may be also of practical money value to the printer to know such facts, and to always be conscious of a fact more likely to be of practical use, namely, that the sensation of color is produced upon our sensory nerves in a manner closely analogous to that which produces the sensation of harmony: by ether waves set in motion in a different way. These sensory nerves are the most57 easily entered avenues to our pleasurable sensations; far more delicate and responsive than the different brain organs to the more obvious consciousnesses, as personal regard and literary appreciation, etc.
+	
+	</p>
+	<div id="buttons">
+	<figure>
+		<img onClick="window.print();" src="graphicdesignicon.png"  />
+	<figcaption> Print Window </figcaption>
+		</figure>
+		
+	<figure>
+	<img onClick="increaseContrast();" src="colorcontrast.png" />
+		<figcaption> Increase Contrast</figcaption>
+		</figure>
+		
+	<figure>
+		<img onClick="resetContrast();" src="colorcontrast 2.png" style="filter:grayscale(0.75)"/>
+		<figcaption> Reset Contrast </figcaption>
+		</figure>
+</div>	
+		
+<div class="image-container">
+	<button onClick="toggleAllDetails()" class="toggle-button">Open/Close Captions</button>
+	<figure>
+  <img src="menu.jpg" alt="menu">
+  <details>
+    <summary>Honey Bloom Cafe Menu</summary>
+	  <p class="menu-description">I made a tropical summer cafe menu called "Honey Bloom"</p>
+ </details>	
+</figure>
+<figure>
+  <img src="book.jpg" alt="book">
+  <details>
+    <summary>UGLY BOOK by Anna Wintour</summary>
+     <p class="book-description">I made a UGLY BOOK by Anna Wintour. It discusses about toxic korean beauty standards</p>
+  </details>
+</figure>
+<figure>
+  <img src="toy.jpg" alt="toy">
+  <details>
+    <summary>Rilakkuma Toy Packaging</summary>
+	  <p class="toy-description">I made a Blossom collectible toy Packaging of Rilakkuma</p>
+  </details>
+</figure>
+	<div id="polkadots">
+    <div id="circle1"></div>
+    <div id="circle2"></div>
+		</div>
+		</div> 
+
+<script>
+function toggleAllDetails() {
+  const details = document.querySelectorAll('.image-container details');
+  details.forEach(d => d.open = !d.open);
+} const images = document.querySelectorAll('.image-container img');
+    let zoomedImage = null;
+
+    images.forEach(img => {
+      img.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevents the body click from firing
+        // If already zoomed, do nothing
+        if (zoomedImage && zoomedImage !== img) {
+          zoomedImage.classList.remove('zoomed');
+        }
+
+        if (img.classList.contains('zoomed')) {
+          img.classList.remove('zoomed');
+          zoomedImage = null;
+        } else {
+          img.classList.add('zoomed');
+          zoomedImage = img;
+        }
+      });
+    });
+
+    // Click outside to reset zoom
+    document.body.addEventListener('click', () => {
+      if (zoomedImage) {
+        zoomedImage.classList.remove('zoomed');
+        zoomedImage = null;
+      }
+    });
+</script>
+<script lang="javascript">
+function toggleAllDetails() {
+  // Get all <details> elements on the page
+  const allDetails = document.querySelectorAll('details');
+
+  // Iterate through each <details> element
+  allDetails.forEach(detailsElement => {
+    // Toggle the 'open' attribute
+    // If it has 'open', remove it (closes the details)
+    // If it doesn't have 'open', add it (opens the details)
+    if (detailsElement.hasAttribute('open')) {
+      detailsElement.removeAttribute('open');
+    } else {
+      detailsElement.setAttribute('open', true);
+    }
+  });
+} 
+</script>
+		<script>
+   $(function(){
+      $('#circle1, #circle2').draggable();
+   }); 
+</script>
+
+</div> 
+</body>
+</html>
+
